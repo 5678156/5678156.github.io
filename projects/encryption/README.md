@@ -56,21 +56,21 @@ Assume that each packet can hold two bytes. Fill in the packet information
     Packet 1:
 
     Source: [Davi]
-    Destination: [Naoke]  
+    Destination: [Naoki]  
     Sequence: 1/3
     Data: [01010110] [01010011]
     =========
     Packet 2:
 
     Source: [Davi]
-    Destination: [Naioke]
+    Destination: [Naoki]
     Sequence: 2/3 
     Data: [01011010] [01011010]
     =========
     Packet 3:
 
     Source: [Davi]
-    Destination: [Naioke]
+    Destination: [Naoki]
     Sequence: 3/3
     Data: [01001011] []
     =========
