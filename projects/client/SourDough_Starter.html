@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SourDough_Starter</title>
+<style>
+
+.grid{
+	display: grid;
+	height: 100vh;
+	grid:
+		'head head head  head' 1fr
+		'menu menu menu  menu' 3fr
+                'main main main2 main2'4fr
+		'foot foot foot  foot' 1fr
+		/1fr  3fr  1fr   3fr;
+}
+.head{
+	grid-area: head;
+	width: 100%;
+	height: 100%;
+	background-color: DarkBlue;
+	text-align: center;
+	font-size: 50px;
+	color: LightPink;
+}
+.menu{
+	grid-area: menu;
+	width: 100%;
+	height: 100%;
+	background-color: Indigo;
+	text-align: center;
+	font-size: 24px;
+	color: LightPink;
+}
+.foot{
+	grid-area: foot;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	text-align: center;
+	font-size: 24px;
+	color: white;
+}
+.main{
+	grid-area: main;
+	width: 100%;
+	height: 100%;
+	background-color: DarkBlue;
+	margin-top: 10px;
+}
+.main2{
+	grid-area: main2;
+	width: 100%;
+	height: 100%;
+	background-color: DarkBlue;
+	margin-top: 10px;
+}
+</style>
+</head>
+<body>
+	<div class="grid">
+		<div class="head">SourDough Bread Starter</div>
+		<div class="menu"><ul><li>A good sourdough bread requires an active
+					starter.</li><li> A starter is simply
+					fermented flour and water.</li><li>
+			Once you have an active starter, you must feed it daily
+			to keep it active.</li><li> Feeding just means giving it equal
+			parts flour and water and letting it sit on the counter
+			to ferment.</li><li> You can place it in the fridge until you
+			need to use it.</li></div>  
+		<div class="main"><img src="../../images/SourDough_Starter.jpg"
+					       alt="bread" style="width:80%; height:80%"></div>
+
+<div class="main2"><img src="../../images/SourDough_Starter1.jpg"
+					       alt="bread" style="width:80%; height:80%"></div>	
+
+		<div class="foot">703-698-1234<p>Call me</p></div>
+</div>
+</body>
+</html>
