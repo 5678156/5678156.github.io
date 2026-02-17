@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Self Portrait</title>
+<style>
+canvas{
+	border: 2px black solid;
+	display: block;
+	margin: auto;
+}
+</style>
+	</head>
+	<body>
+		<h1>My Self Portrait</h1>
+		<canvas width=800 height=800 id="heart"></canvas>
+
+		<script>
+			//Setup the Canvas
+			const canvas = document.getElementById("heart");
+			const ctx = canvas.getContext("2d");
+
+			//Setup the colors for fill and stroke
+			ctx.fillStyle="pink";
+			ctx.fillStyle="#f542f2";
+			ctx.strokeStyle="Black";
+			ctx.lineWidth = 2;
+
+			//Draw Background
+			ctx.fillRect(0, 0, 800, 800);
+
+			//Draw first arc
+			ctx.fillStyle="brown"
+			ctx.beginPath();
+			ctx.arc(400, 200, 175, -Math.PI, 0);
+
+			//Color it in
+			ctx.fill();
+			ctx.stroke();
+
+			//Draw first line
+			ctx.beginPath();
+			ctx.moveTo(575, 200);
+			ctx.lineTo(575, 400);
+
+			//Color it in
+			ctx.fill();
+			ctx.stroke();
+
+			//Draw second arc
+			ctx.fillStyle="#FFBF00"
+			ctx.beginPath();
+			ctx.arc(400, 400, 175, 0, Math.PI);
+
+			//Color it in
+			ctx.fill();
+			ctx.stroke();
+
+
+			//Draw second line
+			ctx.fillStyle="#FFBF00"
+			ctx.beginPath();
+			ctx.moveTo(225, 200);
+			ctx.lineTo(225, 400);
+
+			//Color it in
+			ctx.fill();
+			ctx.stroke();
+
+			//Draw third line
+			ctx.beginPath();
+			ctx.moveTo(225, 200);
+			ctx.lineTo(300, 200);
+
+			//Color it in
+			ctx.fill();
+			ctx.stroke();
+
+			//Draw third arc
+			ctx.fillStyle="#FFBF00"
+			ctx.beginPath();
+			ctx.arc(400, 200, 100, -Math.PI, 0);
+
+			//Color it in
+			ctx.fill();
+			ctx.stroke();
+
+			//Fourth line
+			ctx.beginPath();
+			ctx.moveTo(500, 200);
+			ctx.lineTo(575, 200);
+
+			//Color it in
+			ctx.fill();
+			ctx.stroke();
+
+			//Fifth line
+			ctx.fillStyle="brown";
+			ctx.beginPath();
+			ctx.moveTo(300, 200);
+			ctx.lineTo(400, 100);
+
+			//Color it in
+			ctx.fill();
+			ctx.stroke();
+
+
+			//wide ellipse below the cirlce
+			ctx.fillStyle = "white";
+			ctx.strokeStyle = "black";
+			ctx.lineWidth=10;
+			ctx.beginPath();
+			ctx.ellipse(325, 275, 60, 25, Math.PI, 0,
+				2*Math.PI);
+			ctx.stroke();
+			ctx.fill();
+
+
+			//wide ellipse below the cirlce 2
+			ctx.fillStyle = "white";
+			ctx.strokeStyle = "black";
+			ctx.lineWidth=10;
+			ctx.beginPath();
+			ctx.ellipse(475, 275, 60, 25, Math.PI, 0,
+				2*Math.PI);
+			ctx.stroke();
+			ctx.fill();
+
+
+			//wide ellipse below the cirlce 3
+			ctx.fillStyle = "black";
+			ctx.lineWidth=10;
+			ctx.beginPath();
+			ctx.ellipse(325, 275, 25, 15, Math.PI/2, 0,
+				2*Math.PI);
+			ctx.stroke();
+			ctx.fill();
+
+			//wide ellipse below the cirlce 3
+			ctx.fillStyle = "black";
+			ctx.lineWidth=10;
+			ctx.beginPath();
+			ctx.ellipse(475, 275, 25, 15, Math.PI/2, 0,
+				2*Math.PI);
+			ctx.stroke();
+			ctx.fill();
+
+			//wide ellipse below the cirlce 3
+			ctx.fillStyle = "black";
+			ctx.lineWidth=10;
+			ctx.beginPath();
+			ctx.ellipse(325, 225, 35, 15, Math.PI/12, 0,
+				2*Math.PI);
+			ctx.stroke();
+			ctx.fill();
+
+
+			//wide ellipse below the cirlce 3
+			ctx.fillStyle = "black";
+			ctx.lineWidth=10;
+			ctx.beginPath();
+			ctx.ellipse(475, 225, 35, 15, -Math.PI/12, 0,
+				2*Math.PI);
+			ctx.stroke();
+			ctx.fill();
+
+
+			//triangle
+			ctx.beginPath();
+			ctx.moveTo(400,260);
+			ctx.lineTo(425,360);
+			ctx.lineTo(375,360);
+			ctx.lineTo(400,260);
+			ctx.stroke();
+			ctx.fill();
+
+			//lines
+			ctx.beginPath();
+			ctx.moveTo(575, 250)
+			ctx.lineTo(625, 275)
+			ctx.stroke();
+			ctx.fill();
+			ctx.moveTo(625, 275)
+			ctx.lineTo(645, 315)
+			ctx.stroke();
+			ctx.fill();
+			ctx.moveTo(645, 315)
+			ctx.lineTo(625, 355)	
+			ctx.stroke();
+			ctx.fill();
+			ctx.moveTo(625, 355)
+			ctx.lineTo(575, 395)
+			ctx.stroke();
+			ctx.fill();
+
+
+			//lines
+			ctx.beginPath();
+			ctx.moveTo(225, 250)
+			ctx.lineTo(175, 275)
+			ctx.stroke();
+			ctx.fill();
+			ctx.moveTo(175, 275)
+			ctx.lineTo(155, 315)
+			ctx.stroke();
+			ctx.fill();
+			ctx.moveTo(155, 315)
+			ctx.lineTo(175, 355)	
+			ctx.stroke();
+			ctx.fill();
+			ctx.moveTo(175, 355)
+			ctx.lineTo(225, 395)
+			ctx.stroke();
+			ctx.fill();
+
+			//ellipses
+			
+			//wide ellipse below the cirlce
+			ctx.fillStyle = "white";
+			ctx.strokeStyle = "black";
+			ctx.lineWidth=10;
+			ctx.beginPath();
+			ctx.ellipse(400, 450, 70, 35, Math.PI, 0,
+				2*Math.PI);
+			ctx.stroke();
+			ctx.fill();
+
+			//circles
+			ctx.fillStyle="white"
+			ctx.beginPath();
+				ctx.arc(415,360,10,0,2*Math.PI);
+			ctx.fill();
+
+
+			//circles
+			ctx.fillStyle="white"
+			ctx.beginPath();
+				ctx.arc(385,360,10,0,2*Math.PI);
+			ctx.fill();
+
+
+			//recangles
+			ctx.fillStyle = "blue";
+			ctx.strokeStyle = "black";
+			ctx.lineWidth = 5;
+			ctx.beginPath();
+			ctx.fillRect(375, 415, 25, 25)
+			ctx.stroke();
+			ctx.fill();
+
+
+			//recangles
+			ctx.fillStyle = "blue";
+			ctx.strokeStyle = "black";
+			ctx.lineWidth = 5;
+			ctx.beginPath();
+			ctx.fillRect(415, 415, 25, 25)
+			ctx.stroke();
+			ctx.fill();
+
+
+			//recangles
+			ctx.fillStyle = "blue";
+			ctx.strokeStyle = "black";
+			ctx.lineWidth = 5;
+			ctx.beginPath();
+			ctx.fillRect(400, 460, 25, 25)
+			ctx.stroke();
+			ctx.fill();
+
+
+			//recangles
+			ctx.fillStyle = "blue";
+			ctx.strokeStyle = "black";
+			ctx.lineWidth = 5;
+			ctx.beginPath();
+			ctx.fillRect(360, 459, 25, 25)
+			ctx.stroke();
+			ctx.fill();
+
+			//arc
+			ctx.beginPath();
+			ctx.arc(400, 200, 30, Math.PI/2, 3/2*Math.PI);
+			ctx.stroke();
+			ctx.fill();
+
+		</script>
+	</body>
+</html>
