@@ -38,6 +38,7 @@ canvas{
 			ctx.stroke();
 
 			//Draw first line
+			ctx.fillStyle = "#FFBF00"
 			ctx.beginPath();
 			ctx.moveTo(575, 200);
 			ctx.lineTo(575, 400);
@@ -279,7 +280,14 @@ canvas{
 
 			//arc
 			ctx.beginPath();
-			ctx.arc(400, 200, 30, Math.PI/2, 3/2*Math.PI);
+			ctx.arc(225, 320, 30, Math.PI/2, 3/2*Math.PI);
+			ctx.stroke();
+			ctx.fill();
+
+
+			//arc
+			ctx.beginPath();
+			ctx.arc(575, 320, 30, 3/2*Math.PI, Math.PI/2);
 			ctx.stroke();
 			ctx.fill();
 
