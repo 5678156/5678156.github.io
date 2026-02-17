@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Self Portrait</title>
+<style>
+canvas{
+	border: 2px black solid;
+	display: block;
+	margin: auto;
+}
+</style>
+	</head>
+	<body>
+		<h1>My Self Portrait</h1>
+		<canvas width=800 height=800 id="heart"></canvas>
+
+		<script>
+			//Setup the Canvas
+			const canvas = document.getElementById("heart");
+			const ctx = canvas.getContext("2d");
+
+			//Setup the colors for fill and stroke
+			ctx.fillStyle="pink";
+			ctx.fillStyle="#f542f2";
+			ctx.strokeStyle="Black";
+			ctx.lineWidth = 2;
+
+			//Draw Background
+			ctx.fillRect(0, 0, 800, 800);
+
+			//Draw first arc
+			ctx.beginPath();
+			ctx.arc(400, 200, 175, -Math.PI, 0);
+
+			//Color it in
+			ctx.fill();
+			ctx.stroke();
+
+			//Draw first line
+			ctx.beginPath();
+			ctx.moveTo(575, 200);
+			ctx.lineTo(575, 400);
+
+			//Color it in
+			ctx.fill();
+			ctx.stroke();
+
+			//Draw second arc
+			ctx.beginPath();
+			ctx.arc(400, 400, 175, 0, Math.PI);
+
+			//Color it in
+			ctx.fill();
+			ctx.stroke();
+
+
+			//Draw second line
+			ctx.beginPath();
+			ctx.moveTo(225, 200);
+			ctx.lineTo(225, 400);
+
+			//Color it in
+			ctx.fill();
+			ctx.stroke();
+
+			//Draw third line
+			ctx.beginPath();
+			ctx.moveTo(225, 200);
+			ctx.lineTo(300, 200);
+
+			//Color it in
+			ctx.fill();
+			ctx.stroke();
+
+			//Draw third arc
+			ctx.beginPath();
+			ctx.arc(400, 200, 100, -Math.PI, 0);
+
+			//Color it in
+			ctx.fill();
+			ctx.stroke();
+
+			//Fourth line
+			ctx.beginPath();
+			ctx.moveTo(500, 200);
+			ctx.lineTo(575, 200);
+
+			//Color it in
+			ctx.fill();
+			ctx.stroke();
+
+			//Fifth line
+			ctx.beginPath();
+			ctx.moveTo(300, 200);
+			ctx.lineTo(400, 100);
+
+			//Color it in
+			ctx.fill();
+			ctx.stroke();
+
+
+			//wide ellipse below the cirlce
+			ctx.fillStyle = "white";
+			ctx.strokeStyle = "black";
+			ctx.lineWidth=10;
+			ctx.beginPath();
+			ctx.ellipse(325, 275, 60, 25, Math.PI, 0,
+				2*Math.PI);
+			ctx.stroke();
+			ctx.fill();
+
+
+			//wide ellipse below the cirlce 2
+			ctx.fillStyle = "white";
+			ctx.strokeStyle = "black";
+			ctx.lineWidth=10;
+			ctx.beginPath();
+			ctx.ellipse(475, 275, 60, 25, Math.PI, 0,
+				2*Math.PI);
+			ctx.stroke();
+			ctx.fill();
+
+
+			//wide ellipse below the cirlce 3
+			ctx.fillStyle = "black";
+			ctx.lineWidth=10;
+			ctx.beginPath();
+			ctx.ellipse(325, 275, 25, 15, Math.PI/2, 0,
+				2*Math.PI);
+			ctx.stroke();
+			ctx.fill();
+
+			//wide ellipse below the cirlce 3
+			ctx.fillStyle = "black";
+			ctx.lineWidth=10;
+			ctx.beginPath();
+			ctx.ellipse(475, 275, 25, 15, Math.PI/2, 0,
+				2*Math.PI);
+			ctx.stroke();
+			ctx.fill();
+
+			//wide ellipse below the cirlce 3
+			ctx.fillStyle = "black";
+			ctx.lineWidth=10;
+			ctx.beginPath();
+			ctx.ellipse(325, 225, 35, 15, Math.PI/12, 0,
+				2*Math.PI);
+			ctx.stroke();
+			ctx.fill();
+
+
+			//wide ellipse below the cirlce 3
+			ctx.fillStyle = "black";
+			ctx.lineWidth=10;
+			ctx.beginPath();
+			ctx.ellipse(475, 225, 35, 15, -Math.PI/12, 0,
+				2*Math.PI);
+			ctx.stroke();
+			ctx.fill();
+
+		</script>
+	</body>
+</html>
