@@ -10,14 +10,16 @@ library to the first floor.
 
 ```mermaid
 graph TD;
-    bus(((Bus)))-->Commons;
-    Library-->Commons;
-    Box-->Cafeteria;
-    Cafeteria-->Commons;
-    Commons-->Outside;
-    Outside-->Portable;
-    Portable-->rm511;
-    Portable-->Bathroom;
+    lobby(((lobby)))-->Lounge;
+    Bathroom-->Lounge;
+    Stall 1-->Bathroom;
+    Stall 2-->Bathroom;
+    Lounge-->Gym;
+    Game Room-->Lounge;
+    Gym-->Secret Room;
+    Secret Room-->?;
+    Lounge-->Play Room;
+    Play Room-->Hidden Drawer;
 ```
 
 The player starts on the bus, and then is directed into the Commons. T
