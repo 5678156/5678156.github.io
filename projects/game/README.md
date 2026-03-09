@@ -11,9 +11,9 @@ library to the first floor.
 ```mermaid
 graph TD;
     lobby(((lobby)))-->Lounge;
-    Bathroom-->Lounge;
+    Bathroom<-->Lounge;
     Lounge-->Gym;
-    GameRoom-->Lounge;
+    GameRoom<-->Lounge;
     Gym-->SecretRoom;
 ```
 
