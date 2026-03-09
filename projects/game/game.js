@@ -1,4 +1,3 @@
-let gameActive = true; 
 let haveKey = false;
 let openDoor = false;
 let day = 0;
