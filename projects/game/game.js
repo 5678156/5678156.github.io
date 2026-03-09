@@ -61,7 +61,7 @@ function lobby()
     } else {
         gameActive = false;
     }
-}
+
 
     waitForInput(processInput);
 }
