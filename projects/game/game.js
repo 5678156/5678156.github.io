@@ -64,7 +64,7 @@ function getDayName(dayNum) {
 function lobby() {
     lobbyDiscovered = true;
     if (!check_time()) return;
-    print("\nYou are in the Lobby hanging out.");
+    print("\nYou are in the lobby hanging out.");
     print("\nWhere do you go?");
     print("Lounge");
     print("stay here");
@@ -112,10 +112,10 @@ function Lounge() {
 function Bathroom() {
     BathroomDiscovered = true;
     if (!check_time()) return;
-    print("\nYou are in the bathroom area.");
+    print("\nYou are in the Bathroom area.");
     print("\nWhere do you go?");
     print("Lounge");
-    print("stay in bathroom");
+    print("stay in Bathroom");
     function processInput(input){
         if (input.toLowerCase() === "lounge") {
             Lounge();
