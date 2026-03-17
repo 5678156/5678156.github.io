@@ -196,3 +196,4 @@ function SecretRoom() {
     SecretRoomDiscovered = true;
     print("\nYou escaped!")
 }
+}
