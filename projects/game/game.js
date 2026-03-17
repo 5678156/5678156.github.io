@@ -158,6 +158,7 @@ function Bathroom() {
     if (haveMark && !haveKey) {
         print("\nYou find the key in the Bathroom.");
         haveKey = true;
+	haveMark = true;
     }
     print("\nWhere do you go?");
     print("Lounge");
@@ -198,7 +199,6 @@ function Gym() {
     if (!check_time()) return;
     if (haveMark && haveKey)
         print("\nDoor is unlocked.");
-        print("You see a note from Mark and take it.");
         haveMark = true;
 	haveKey = true;
         print("\nGo into the secretroom!");
