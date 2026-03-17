@@ -63,8 +63,12 @@ function getDayName(dayNum) {
 function caughtByMason() {
 	clear();
 	print("You should have not have chosen to stay...");
+	setTimeout(function() {
 	print("Mason walks in and catches you!");
+	setTimeout(function() {
 	print("GAME OVER");
+	},2000);
+		{,2000);
     if (day < 5) {
         print("\nWould you like to try again tomorrow? Say yes or no");
         function processInput(input){
