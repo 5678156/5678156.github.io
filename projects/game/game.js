@@ -140,17 +140,16 @@ function Gym() {
 	if (input.toLowerCase() === "lounge") {
             Lounge();
         }
-    else if (input.toLowerCase() === "secretroom") (haveMark && !haveKey)
+       else if (input.toLowerCase() === "secretroom") (haveMark && !haveKey)
         print("\nDoor is still locked.");
         function processInput(){
             Gym();
         }
-    else {
-        print("You have the key");
+        else 
+        print("\nYou have the key");
         print("You can unlock the door!");
         print("Mason is right behind you!");
         gameActive = true;
-    }
 }
 	waitForInput(processInput);
 }
