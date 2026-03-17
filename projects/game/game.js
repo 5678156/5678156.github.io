@@ -6,7 +6,6 @@ let minutes = 0;
 let gameActive = true;
 let LobbyDiscovered = true;
 let BathroomDiscovered = false;
-let GameRoomDiscovered = false;
 let LoungeDiscovered = false;
 let GymDiscovered = false;
 let SecretRoomDiscovered = false;
@@ -87,7 +86,6 @@ function Lounge() {
     print("\nYou are in the Lounge chilling.");
     print("\nWhere do you go?");
     print("Lobby");
-    print("GameRoom");
     print("Bathroom");
     print("Gym");	
     print("stay here");
@@ -95,9 +93,6 @@ function Lounge() {
 	function processInput(input){
         if (input.toLowerCase() === "lobby") {
             Lobby();
-        }
-        else if (input.toLowerCase() === "gameroom") {
-            GameRoom();
         }
         else if (input.toLowerCase() === "bathroom") {
             Bathroom();
@@ -175,26 +170,6 @@ function Bathroom() {
     }
     waitForInput(processInput);
 }
-function GameRoom() {
-    GameRoomDiscovered = true;
-    if (!check_time()) return;
-    print("\nYou are in the GameRoom.");
-    print("You are playing games!");
-    print("\nWhere do you go?");
-    print("Lounge");	
-    print("stay here");
-
-	function processInput(input){
-        if (input.toLowerCase() === "lounge") {
-            Lounge();
-        }
-        else if (input.toLowerCase() === "stay here") {
-            GameRoom();
-        }   
-    }
-    waitForInput(processInput);
-}
-
 function Gym() {
     GymDiscovered = true;
     if (!check_time()) return;

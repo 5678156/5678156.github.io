@@ -13,7 +13,6 @@ graph TD;
     Lobby(((Lobby)))<-->Lounge;
     Bathroom<-->Lounge;
     Lounge<-->Gym;
-    GameRoom<-->Lounge;
     Gym<-->SecretRoom;
 ```
 
