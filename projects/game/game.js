@@ -107,6 +107,7 @@ function Lounge() {
         }
     waitForInput(processInput);
 }
+}
 function Bathroom() {
     BathroomDiscovered = true;
     if (!check_time()) return;
