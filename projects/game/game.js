@@ -151,11 +151,10 @@ function Gym() {
 function Bathroom() {
     BathroomDiscovered = true;
     if (!check_time()) return;
-    if (haveMark && !haveKey) {
-        print("\nYou find the key in the Bathroom.");
+    if (haveMark && !haveKey)
+        print("\nYou find the key in the Bathroom and take it.");
         haveKey = true;
 	haveMark = true;
-    }
     print("\nWhere do you go?");
     print("Lounge");
     print("stay here");{
