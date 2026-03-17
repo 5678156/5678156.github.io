@@ -186,7 +186,7 @@ function Gym() {
 	if (input.toLowerCase() === "lounge") {
             Lounge();
         }
-       else if (input.toLowerCase() === "secretroom" && have mark && haveKey)
+       else if (input.toLowerCase() === "secretroom") && have mark && haveKey
         print("\nGOOOOOOOO")
         function processInput(){
             SecretRoom();
