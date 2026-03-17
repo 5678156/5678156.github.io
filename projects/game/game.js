@@ -141,22 +141,24 @@ function Gym() {
 	if (input.toLowerCase() === "lounge") {
             Lounge();
         }
+	else if (input.toLowerCase() === "secretroom" && haveKey) {
+		SecretRoom();
+	}
        else if (input.toLowerCase() === "secretroom" && !haveKey) {
         print("\nDoor is still locked.");
             Gym();
         }
-	else if (input.toLowerCase() === "secretroom" && haveKey) {
-		SecretRoom();
-	}
 }
 	waitForInput(processInput);
 }
 function Bathroom() {
     BathroomDiscovered = true;
     if (!check_time()) return;
-    if (!haveKey)
+    if (!haveKey) {
         print("\nYou find the key in the Bathroom and take it.");
         haveKey = true;
+    }
+
     print("\nWhere do you go?");
     print("Lounge");
     print("stay here");{
@@ -199,6 +201,6 @@ function Gym() {
 }
 function SecretRoom() {
     SecretRoomDiscovered = true;
-    print("\nYou escaped!")
+    print("\nYou escaped!");
 }
 }
