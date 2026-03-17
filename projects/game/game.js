@@ -4,7 +4,7 @@ let haveKey = false;
 let day = 0;
 let minutes = 0;
 let gameActive = true;
-let loungeDiscovered = true;
+let lobbyDiscovered = true;
 let bathroomDiscovered = false;
 let GameRoomDiscovered = false;
 let lobbyDiscovered = false;
@@ -19,13 +19,13 @@ function check_time() {
         return false;
     } else {
         print("---");
-        print("It is 7:" + (45+minutes) + ". Class starts in " + (15 - minutes) + " minutes");
+        print("It is 7:" + (45+minutes) + ". Mason comes in " + (15 - minutes) + " minutes");
         print("---");
         return true;
     }
 }
 function tardy() {
-    print("You didn't make it to class on time, so you fail");
+    print("You didn't make it out in time, so you fail");
     if (day < 5) {
         print("\nWould you like to try again tomorrow? Say yes or no");
         function processInput(input){
@@ -47,12 +47,12 @@ function tardy() {
 function start() {
     clear();
     print("Happy " + getDayName(day) + "!");
-    print("\nYou've arrived at school.");
-    print("It is 7:45am and class starts in 15 minutes.");
-    print("\nType Start to get off the bus");
+    print("\nYou've arrived home.");
+    print("It is 3:00pm and Mason will find you in 15 minutes.");
+    print("\nType Start to open the door");
     function processInput(input){
         if (input.toLowerCase() === "start") {
-            lounge();
+            lobby();
         }
     }
     waitForInput(processInput);
@@ -61,10 +61,10 @@ function getDayName(dayNum) {
     const days = ['Monday','Tuesday','Wednesday','Thursday','Friday'];
     return days[dayNum];
 }
-function GameRoom() {
-    GameRoomDiscovered = true;
+function lounge() {
+    loungeDiscovered = true;
     if (!check_time()) return;
-    print("\nYou are in the GameRoom playing games.");
+    print("\nYou are in the Lounge hanging out.");
     print("\nWhere do you go?");
     print("lounge");
     print("stay here");
