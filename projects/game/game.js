@@ -192,6 +192,32 @@ function GameRoom() {
     }
     waitForInput(processInput);
 }
+
+function Gym() {
+    GymDiscovered = true;
+    if (!check_time()) return;
+    if (haveMark && haveKey)
+        print("\nDoor is unlocked.");
+        print("You see a note from Mark and take it.");
+        haveMark = true;
+	haveKey = true;
+        print("\nGo into the secretroom!");
+	print("\nWhere would you like to go")
+	print("Lounge")
+	print("SecretRoom")
+
+        function processInput(input) {
+	if (input.toLowerCase() === "lounge") {
+            Lounge();
+        }
+       else if (input.toLowerCase() === "secretroom") (haveMark && haveKey)
+        print("\nGOOOOOOOO")
+        function processInput(){
+            SecretRoom();
+        }
+}
+	waitForInput(processInput);
+}
 function SecretRoom() {
     SecretRoomDiscovered = true;
     print("\nYou escaped!")
