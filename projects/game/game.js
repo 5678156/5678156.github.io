@@ -165,8 +165,6 @@ function Gym() {
     GymDiscovered = true;
     if (!check_time()) return;
     if (!haveMark) {
-        print("\nDoor is locked.");
-        print("You see the mark and take it.");
         haveMark = true;
         print("\nGo get the key in the bathroom!");
     }
@@ -228,8 +226,7 @@ function Gym() {
         function processInput(input) {
 	if (input.toLowerCase() === "lounge") {
             Lounge();
-        } else if (input.toLowerCase() === "secretroom")
-        function processInput(){
+        } else if (input.toLowerCase() === "secretroom"){
             SecretRoom();
         }
 }
