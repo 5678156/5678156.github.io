@@ -72,7 +72,7 @@ function caughtByMason() {
     if (day < 5) {
 	    setTimeout(function() {
         print("\nWould you like to try again tomorrow? Say yes or no");
-	    },2000);
+	    },2500);
         function processInput(input){
             if (input.toLowerCase() === "yes") {
                 day++;
