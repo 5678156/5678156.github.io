@@ -188,7 +188,7 @@ function Gym() {
 	if (input.toLowerCase() === "lounge") {
             Lounge();
         }
-	else if (input.toLowerCase() === "secretroom" && haveKey {
+	else if (input.toLowerCase() === "secretroom" && haveKey) {
 		SecretRoom();
 	}
        else if (input.toLowerCase() === "secretroom" && !haveKey) {
