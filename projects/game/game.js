@@ -135,7 +135,7 @@ function Gym() {
 	print("\nWhere would you like to go")
 	print("Lounge")
 	print("SecretRoom")
-	print("stay in Gym"){
+	print("stay in Gym")
         function processInput()
 	if (input.toLowerCase() === "lounge") {
             Lounge();
