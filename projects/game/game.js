@@ -145,11 +145,6 @@ function Gym() {
         function processInput(){
             Gym();
         }
-        else 
-        print("\nYou have the key");
-        print("You can unlock the door!");
-        print("Mason is right behind you!");
-        gameActive = true;
 }
 	waitForInput(processInput);
 }
