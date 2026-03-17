@@ -201,6 +201,7 @@ function Gym() {
 }
 function SecretRoom() {
     SecretRoomDiscovered = true;
+    if (!check_time()) return;
     print("\nYou escaped!");
 }
 }
