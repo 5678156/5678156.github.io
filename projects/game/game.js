@@ -121,7 +121,8 @@ function Lounge() {
     print("Lobby");
     print("Bathroom");
     print("Gym");	
-    print("stay here");
+    print("stay");
+    print("lounge");
 
 	function processInput(input){
         if (input.toLowerCase() === "lobby") {
@@ -133,9 +134,12 @@ function Lounge() {
 	else if (input.toLowerCase() === "gym") {
 	    Gym();
 	}
-        else if (input.toLowerCase() === "stay here") {
+        else if (input.toLowerCase() === "stay") {
             Lounge();
         }
+	else if (input.toLowerCase() === "lounge") {
+		caughtByMason();
+	}
 	}
     waitForInput(processInput);
 }
