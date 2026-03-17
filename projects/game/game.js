@@ -145,10 +145,12 @@ function Gym() {
         function processInput(){
             Gym();
         }
-    else (input.toLowerCase() === "stay in gym") {
+    else if (input.toLowerCase() === "stay in gym") {
 	    Gym();
-        waitForInput(processInput);
     }
+	}
+        waitForInput(processInput);
+    
     else {
         print("You have the key");
         print("You can unlock the door!");
