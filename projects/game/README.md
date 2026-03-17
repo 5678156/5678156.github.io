@@ -10,7 +10,7 @@ library to the first floor.
 
 ```mermaid
 graph TD;
-    lobby(((lobby)))<-->Lounge;
+    Lobby(((Lobby)))<-->Lounge;
     Bathroom<-->Lounge;
     Lounge<-->Gym;
     GameRoom<-->Lounge;

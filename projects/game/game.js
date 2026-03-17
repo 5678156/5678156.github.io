@@ -4,10 +4,10 @@ let haveKey = false;
 let day = 0;
 let minutes = 0;
 let gameActive = true;
-let loungeDiscovered = true;
-let bathroomDiscovered = false;
+let LobbyDiscovered = true;
+let BathroomDiscovered = false;
 let GameRoomDiscovered = false;
-let lobbyDiscovered = false;
+let LoungeDiscovered = false;
 let GymDiscovered = false;
 let SecretRoomDiscovered = false;
 // Game functions
@@ -52,7 +52,7 @@ function start() {
     print("\nType Start to open the door");
     function processInput(input){
         if (input.toLowerCase() === "start") {
-            lobby();
+            Lobby();
         }
     }
     waitForInput(processInput);
@@ -61,10 +61,10 @@ function getDayName(dayNum) {
     const days = ['Monday','Tuesday','Wednesday','Thursday','Friday'];
     return days[dayNum];
 }
-function lobby() {
-    lobbyDiscovered = true;
+function Lobby() {
+    LobbyDiscovered = true;
     if (!check_time()) return;
-    print("\nYou are in the lobby hanging out.");
+    print("\nYou are in the Lobby hanging out.");
     print("\nWhere do you go?");
     print("Lounge");
     print("stay here");
@@ -74,7 +74,7 @@ function lobby() {
             Lounge();
         }
         else if (input.toLowerCase() === "stay here") {
-            lobby();
+            Lobby();
         }
     }
     waitForInput(processInput);
@@ -85,14 +85,14 @@ function Lounge() {
     if (!check_time()) return;
     print("\nYou are in the Lounge chilling.");
     print("\nWhere do you go?");
-    print("lobby");
+    print("Lobby");
     print("GameRoom");
     print("Bathroom");
     print("Gym");	
-    print("stay in Lounge");
+    print("stay here");
     function processInput(input){
         if (input.toLowerCase() === "lobby") {
-            lobby();
+            Lobby();
         }
         else if (input.toLowerCase() === "gameroom") {
             GameRoom();
@@ -103,7 +103,7 @@ function Lounge() {
 	else if (input.toLowerCase() === "gym") {
 	    Gym();
 	}
-        else if (input.toLowerCase() === "stay in lounge") {
+        else if (input.toLowerCase() === "stay here") {
             Lounge();
         }
     waitForInput(processInput);
@@ -115,12 +115,12 @@ function Bathroom() {
     print("\nYou are in the Bathroom area.");
     print("\nWhere do you go?");
     print("Lounge");
-    print("stay in Bathroom");
+    print("stay here");
     function processInput(input){
         if (input.toLowerCase() === "lounge") {
             Lounge();
         }
-        else if (input.toLowerCase() === "stay in bathroom") {
+        else if (input.toLowerCase() === "stay here") {
             Bathroom();
         }
     }
@@ -137,7 +137,7 @@ function Gym() {
 	print("\nWhere would you like to go")
 	print("Lounge")
 	print("SecretRoom")
-	print("stay in Gym")
+	print("stay here")
         function processInput() {
 	if (input.toLowerCase() === "lounge") {
             Lounge();
@@ -151,21 +151,22 @@ function Gym() {
 	waitForInput(processInput);
 }
 function Bathroom() {
-    bathroomDiscovered = true;
+    BathroomDiscovered = true;
     if (!check_time()) return;
     if (haveMark && !haveKey) {
-        print("\nYou find the key in the bathroom.");
+        print("\nYou find the key in the Bathroom.");
         haveKey = true;
     }
     print("\nWhat do you do?");
-    print("leave");{
+    print("leave");
+    print("stay here");{
     function processInput(input){
             Bathroom();
         }
         if (input.toLowerCase() === "leave") {
             Lounge();
         }
-        else if (input.toLowerCase() === "stay in bathroom") {
+        else if (input.toLowerCase() === "stay here") {
 	    Bathroom();
 	}
     }
@@ -177,12 +178,12 @@ function GameRoom() {
     print("\nYou are in the GameRoom.");
     print("\nWhere do you go?");
     print("Lounge");	
-    print("stay in GameRoom");
+    print("stay here");
     function processInput(input){
         if (input.toLowerCase() === "lounge") {
             Lounge();
         }
-        else if (input.toLowerCase() === "stay in gameroom") {
+        else if (input.toLowerCase() === "stay here") {
             GameRoom();
         }   
     }
