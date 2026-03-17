@@ -90,7 +90,8 @@ function Lounge() {
     print("Bathroom");
     print("Gym");	
     print("stay here");
-    function processInput(input){
+
+	function processInput(input){
         if (input.toLowerCase() === "lobby") {
             Lobby();
         }
@@ -106,8 +107,8 @@ function Lounge() {
         else if (input.toLowerCase() === "stay here") {
             Lounge();
         }
+	}
     waitForInput(processInput);
-}
 }
 function Bathroom() {
     BathroomDiscovered = true;
