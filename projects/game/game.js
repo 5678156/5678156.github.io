@@ -61,10 +61,10 @@ function getDayName(dayNum) {
     const days = ['Monday','Tuesday','Wednesday','Thursday','Friday'];
     return days[dayNum];
 }
-function lounge() {
-    loungeDiscovered = true;
+function lobby() {
+    lobbyDiscovered = true;
     if (!check_time()) return;
-    print("\nYou are in the Lounge hanging out.");
+    print("\nYou are in the Lobby hanging out.");
     print("\nWhere do you go?");
     print("lounge");
     print("stay here");
@@ -73,102 +73,21 @@ function lounge() {
             lounge();
         }
         else if (input.toLowerCase() === "stay here") {
-            GameRoom();
-        }
-    }
-    waitForInput(processInput);
-}
-function Gym() {
-    GymDiscovered = true;
-    if (!check_time()) return;
-    print("\nYou are in the Gym.");
-    print("\nWhere do you go?");
-    print("bathroom");
-    print("SecretRoom");
-    function processInput(input){
-        if (input.toLowerCase() === "bathroom") {
-            bathroom();
-        }
-        else if (input.toLowerCase() === "secretroom") {
-            SecretRoom();
-        }
-    }
-    waitForInput(processInput);
-}
-function bathroom() {
-    bathroomDiscovered = true;
-    if (!check_time()) return;
-    print("\nYou are in the bathroom area.");
-    print("\nWhere do you go?");
-    print("lounge");
-    print("Gym");
-    function processInput(input){
-        if (input.toLowerCase() === "lounge") {
-            lounge();
-        }
-        else if (input.toLowerCase() === "gym") {
-            Gym();
-        }
-    }
-    waitForInput(processInput);
-}
-function SecretRoom() {
-    SecretRoomDiscovered = true;
-    if (!check_time()) return;
-    if (!haveMark) {
-        print("\nChris is asleep.");
-        print("You see a note from Mark and take it.");
-        haveMark = true;
-        print("\nGo get the key in the lobby!");
-        function processInput(){
-            Gym();
-        }
-        waitForInput(processInput);
-    }
-    else if (haveMark && !haveKey) {
-        print("\nChris is still asleep.");
-        function processInput(){
-            Gym();
-        }
-        waitForInput(processInput);
-    }
-    else {
-        print("You give Chris the key.");
-        print("Chris wakes up!");
-        print("You saved the day!");
-        gameActive = false;
-    }
-}
-function lobby() {
-    lobbyDiscovered = true;
-    if (!check_time()) return;
-    if (haveMark && !haveKey) {
-        print("\nYou find the key in the lobby.");
-        haveKey = true;
-    }
-    print("\nWhat do you do?");
-    print("read a book");
-    print("leave");
-    function processInput(input){
-        if (input.toLowerCase() === "read a book") {
-            print("You read and lose track of time...");
-            minutes += 5;
             lobby();
         }
-        else if (input.toLowerCase() === "leave") {
-            lounge();
-        }
     }
     waitForInput(processInput);
 }
-function lounge() {
+
+function Lounge() {
     loungeDiscovered = true;
     if (!check_time()) return;
     print("\nYou are in the lounge.");
     print("\nWhere do you go?");
     print("lobby");
     print("GameRoom");
-    print("bathroom");
+    print("Bathroom");
+    print("Gym");	
     print("stay in lounge");
     function processInput(input){
         if (input.toLowerCase() === "lobby") {
@@ -178,13 +97,105 @@ function lounge() {
             GameRoom();
         }
         else if (input.toLowerCase() === "bathroom") {
-            bathroom();
+            Bathroom();
         }
+	else if (input.toLowerCase() === "gym") {
+	    Gym();
+	}
         else if (input.toLowerCase() === "stay in lounge") {
-            lounge();
+            Lounge();
+        }
+    waitForInput(processInput);
+}
+function Bathroom() {
+    BathroomDiscovered = true;
+    if (!check_time()) return;
+    print("\nYou are in the bathroom area.");
+    print("\nWhere do you go?");
+    print("Lounge");
+    print("stay in bathroom");
+    function processInput(input){
+        if (input.toLowerCase() === "lounge") {
+            Lounge();
+        }
+        else if (input.toLowerCase() === "stay in bathroom") {
+            Bathroom();
         }
     }
     waitForInput(processInput);
 }
-
-
+function Gym() {
+    GymDiscovered = true;
+    if (!check_time()) return;
+    if (!haveMark) {
+        print("\nDoor is locked.");
+        print("You see a note from Mark and take it.");
+        haveMark = true;
+        print("\nGo get the key in the bathroom!");
+	print("\nWhere would you like to go")
+	print("Lounge")
+	print("SecretRoom")
+	print("stay in Gym"){
+        function processInput()
+	if (input.toLowerCase() === "lounge") {
+            Lounge();
+        }
+    }
+    else if (input.toLowerCase() === "secretroom" (haveMark && !haveKey) {
+        print("\nDoor is still locked.");
+        function processInput(){
+            Gym();
+        }
+    }
+    else if (input.toLowerCase() === "stay in gym") {
+	    Gym();
+        waitForInput(processInput);
+    }
+    else {
+        print("You have the key");
+        print("You can unlock the door!");
+        print("Mason is right behind you!");
+        gameActive = true;
+    }
+}
+function Bathroom() {
+    bathroomDiscovered = true;
+    if (!check_time()) return;
+    if (haveMark && !haveKey) {
+        print("\nYou find the key in the bathroom.");
+        haveKey = true;
+    }
+    print("\nWhat do you do?");
+    print("leave");{
+    function processInput(input){
+            Bathroom();
+        }
+        if (input.toLowerCase() === "leave") {
+            Lounge();
+        }
+        else if (input.toLowerCase() === "stay in bathroom") {
+	    Bathroom();
+	}
+    }
+    waitForInput(processInput);
+}
+function GameRoom() {
+    GameRoomDiscovered = true;
+    if (!check_time()) return;
+    print("\nYou are in the GameRoom.");
+    print("\nWhere do you go?");
+    print("Lounge");	
+    print("stay in GameRoom");
+    function processInput(input){
+        if (input.toLowerCase() === "lounge") {
+            Lounge();
+        }
+        else if (input.toLowerCase() === "stay in gameroom") {
+            GameRoom();
+        }   
+    }
+    waitForInput(processInput);
+}
+function SecretRoom() {
+    SecretRoomDiscovered = true;
+    print("\nYou escaped!")
