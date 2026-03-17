@@ -146,7 +146,10 @@ function Lounge() {
 function Bathroom() {
     BathroomDiscovered = true;
     if (!check_time()) return;
-    print("\nYou are in the Bathroom area.");
+    print("\nYou are in the Bathroom area."); 
+    else if (haveMark) {
+        print("\nYou find the key in the Bathroom and take it.");
+        haveKey = true;
     print("\nWhere do you go?");
     print("Lounge");
     print("stay here");
@@ -168,8 +171,16 @@ function Gym() {
         haveMark = true;
         print("\nGo get the key in the bathroom!");
     }
+    if (haveKey) {
+        print("\nDoor is unlocked.");
+        print("\nGo into the secretroom!");
 	print("\nWhere would you like to go")
 	print("Lounge")
+	print("SecretRoom")
+      } else {
+	      print("\nDoor is still locked.");
+	      print("\nWhere would you like to go?");
+	      print("Lounge")
 	print("SecretRoom")
 
         function processInput(input) {
@@ -182,52 +193,6 @@ function Gym() {
        else if (input.toLowerCase() === "secretroom" && !haveKey) {
         print("\nDoor is still locked.");
             Gym();
-        }
-}
-	waitForInput(processInput);
-}
-function Bathroom() {
-    if (!check_time()) return;
-    if (!haveKey) {
-        print("\nYou find the key in the Bathroom and take it.");
-        haveKey = true;
-    }
-
-    print("\nWhere do you go?");
-    print("Lounge");
-    print("stay here");{
-
-	    function processInput(input){
-        if (input.toLowerCase() === "lounge") {
-            Lounge();
-        }
-        else if (input.toLowerCase() === "stay here") {
-	    Bathroom();
-	}
-    }
-    waitForInput(processInput);
-}
-function Gym() {
-    GymDiscovered = true;
-    if (!check_time()) return;
-
-    if (haveKey) {
-        print("\nDoor is unlocked.");
-        print("\nGo into the secretroom!");
-	print("\nWhere would you like to go")
-	print("Lounge")
-	print("SecretRoom")
-      } else {
-	      print("\nDoor is still locked.");
-	      print("\nWhere would you like to go?");
-	      print("Lounge")
-      }
-
-        function processInput(input) {
-	if (input.toLowerCase() === "lounge") {
-            Lounge();
-        } else if (input.toLowerCase() === "secretroom"){
-            SecretRoom();
         }
 }
 	waitForInput(processInput);
