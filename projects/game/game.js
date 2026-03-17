@@ -189,7 +189,7 @@ function Bathroom() {
             Bathroom();
         }
 	else if (input.toLowerCase() === "secretroom") {
-	    caughtInMason;
+	    caughtInMason();
 	}
     }
     waitForInput(processInput);
