@@ -222,7 +222,6 @@ function Gym() {
 	waitForInput(processInput);
 }
 function Bathroom() {
-    BathroomDiscovered = true;
     if (!check_time()) return;
     if (!haveKey) {
         print("\nYou find the key in the Bathroom and take it.");
