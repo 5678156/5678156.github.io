@@ -140,12 +140,11 @@ function Gym() {
 	if (input.toLowerCase() === "lounge") {
             Lounge();
         }
-    else if (input.toLowerCase() === "secretroom") (haveMark && !haveKey) {
+    else if (input.toLowerCase() === "secretroom") (haveMark && !haveKey)
         print("\nDoor is still locked.");
         function processInput(){
             Gym();
         }
-    }
     else if (input.toLowerCase() === "stay in gym") {
 	    Gym();
         waitForInput(processInput);
