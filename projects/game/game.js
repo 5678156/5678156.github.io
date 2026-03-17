@@ -99,13 +99,12 @@ function Lounge() {
             }
         }
 
-        waitForInput(processInput);
     } else {
         gameActive = false;
     }
 }
-
     waitForInput(processInput);
+}
 }
 
 //finally, make sure you customize this to tell it what should happen at the

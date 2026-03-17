@@ -12,19 +12,18 @@ library to the first floor.
 graph TD;
     lobby(((lobby)))<-->Lounge;
     Bathroom<-->Lounge;
-    Lounge-->Gym;
+    Lounge<-->Gym;
     GameRoom<-->Lounge;
-    Gym-->SecretRoom;
+    Gym<-->SecretRoom;
 ```
 
-The player starts on the bus, and then is directed into the Commons. T
-They can explore, but must eventually make their way to rm511.
+The player starts in the lobby, and then starts in the lobby.
+They can explore, but must eventually make their way to the gym.
 
 ## Story
 
-When the user gets to rm511, they learn that the teacher is asleep.
-They must take the teacher's coffee mug to the library, get it 
-filled, and then bring it back to the teacher.
+When the user gets to gym, they learn that the door to escape is locked.
+They must go to the bathroom and get the key, and then unlock the door to finally e
 
 The game starts 15 minutes before the morning class bell, and each
 move costs 1 minute. So this journey must be completed in 15 moves.
