@@ -150,6 +150,7 @@ function Bathroom() {
     if (haveMark) {
         print("\nYou find the key in the Bathroom and take it.");
         haveKey = true;
+    }
     print("\nWhere do you go?");
     print("Lounge");
     print("stay here");
