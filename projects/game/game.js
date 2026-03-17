@@ -63,6 +63,7 @@ function getDayName(dayNum) {
 }
 function Lobby() {
     LobbyDiscovered = true;
+    clear();
     if (!check_time()) return;
     print("\nYou are in the Lobby hanging out.");
     print("\nWhere do you go?");
@@ -210,7 +211,7 @@ function Gym() {
 	if (input.toLowerCase() === "lounge") {
             Lounge();
         }
-       else if (input.toLowerCase() === "secretroom") (haveMark && haveKey)
+       else if (input.toLowerCase() === "secretroom") (haveKey)
         print("\nGOOOOOOOO")
         function processInput(){
             SecretRoom();
