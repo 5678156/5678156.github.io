@@ -147,7 +147,7 @@ function Bathroom() {
     BathroomDiscovered = true;
     if (!check_time()) return;
     print("\nYou are in the Bathroom area."); 
-    else if (haveMark) {
+    if (haveMark) {
         print("\nYou find the key in the Bathroom and take it.");
         haveKey = true;
     print("\nWhere do you go?");
