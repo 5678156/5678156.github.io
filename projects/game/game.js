@@ -66,11 +66,12 @@ function lobby() {
     if (!check_time()) return;
     print("\nYou are in the Lobby hanging out.");
     print("\nWhere do you go?");
-    print("lounge");
+    print("Lounge");
     print("stay here");
-    function processInput(input){
+ 
+	function processInput(input){
         if (input.toLowerCase() === "lounge") {
-            lounge();
+            Lounge();
         }
         else if (input.toLowerCase() === "stay here") {
             lobby();
@@ -80,15 +81,15 @@ function lobby() {
 }
 
 function Lounge() {
-    loungeDiscovered = true;
+    LoungeDiscovered = true;
     if (!check_time()) return;
-    print("\nYou are in the lounge.");
+    print("\nYou are in the Lounge chilling.");
     print("\nWhere do you go?");
     print("lobby");
     print("GameRoom");
     print("Bathroom");
     print("Gym");	
-    print("stay in lounge");
+    print("stay in Lounge");
     function processInput(input){
         if (input.toLowerCase() === "lobby") {
             lobby();
