@@ -65,6 +65,23 @@ function caughtByMason() {
 	print("You should have not have chosen to stay...");
 	print("Mason walks in and catches you!");
 	print("GAME OVER");
+    if (day < 5) {
+        print("\nWould you like to try again tomorrow? Say yes or no");
+        function processInput(input){
+            if (input.toLowerCase() === "yes") {
+                day++;
+                minutes = 0;
+                haveMark = false;
+                haveKey = false;
+                start();
+            } 
+            else if (input.toLowerCase() === "no") {
+                print("Ok, better luck next time!");
+                gameActive = false;
+            }
+        }
+        waitForInput(processInput);
+    }
 }
 function Lobby() {
     LobbyDiscovered = true;
