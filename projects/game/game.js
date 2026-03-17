@@ -68,7 +68,7 @@ function caughtByMason() {
 	setTimeout(function() {
 	print("GAME OVER");
 	},2000);
-		{,2000);
+},2000);
     if (day < 5) {
         print("\nWould you like to try again tomorrow? Say yes or no");
         function processInput(input){
