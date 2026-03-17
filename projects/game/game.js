@@ -117,7 +117,8 @@ function Bathroom() {
     print("\nWhere do you go?");
     print("Lounge");
     print("stay here");
-    function processInput(input){
+
+	function processInput(input){
         if (input.toLowerCase() === "lounge") {
             Lounge();
         }
@@ -138,7 +139,7 @@ function Gym() {
 	print("\nWhere would you like to go")
 	print("Lounge")
 	print("SecretRoom")
-	print("stay here")
+
         function processInput() {
 	if (input.toLowerCase() === "lounge") {
             Lounge();
@@ -158,13 +159,12 @@ function Bathroom() {
         print("\nYou find the key in the Bathroom.");
         haveKey = true;
     }
-    print("\nWhat do you do?");
-    print("leave");
+    print("\nWhere do you go?");
+    print("Lounge");
     print("stay here");{
-    function processInput(input){
-            Bathroom();
-        }
-        if (input.toLowerCase() === "leave") {
+
+	    function processInput(input){
+        if (input.toLowerCase() === "lounge") {
             Lounge();
         }
         else if (input.toLowerCase() === "stay here") {
@@ -177,10 +177,12 @@ function GameRoom() {
     GameRoomDiscovered = true;
     if (!check_time()) return;
     print("\nYou are in the GameRoom.");
+    print("You are playing games!");
     print("\nWhere do you go?");
     print("Lounge");	
     print("stay here");
-    function processInput(input){
+
+	function processInput(input){
         if (input.toLowerCase() === "lounge") {
             Lounge();
         }
