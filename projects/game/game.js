@@ -127,7 +127,7 @@ function Bathroom() {
 function Gym() {
     GymDiscovered = true;
     if (!check_time()) return;
-    if (!haveMark) {
+    if (!haveMark)
         print("\nDoor is locked.");
         print("You see a note from Mark and take it.");
         haveMark = true;
@@ -136,11 +136,10 @@ function Gym() {
 	print("Lounge")
 	print("SecretRoom")
 	print("stay in Gym")
-        function processInput()
+        function processInput() {
 	if (input.toLowerCase() === "lounge") {
             Lounge();
         }
-    }
     else if (input.toLowerCase() === "secretroom" (haveMark && !haveKey) {
         print("\nDoor is still locked.");
         function processInput(){
@@ -157,6 +156,8 @@ function Gym() {
         print("Mason is right behind you!");
         gameActive = true;
     }
+}
+	waitForInput(processInput);
 }
 function Bathroom() {
     bathroomDiscovered = true;
