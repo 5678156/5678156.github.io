@@ -204,4 +204,3 @@ function SecretRoom() {
     print("\nYou escaped!");
 }
 }
-}
