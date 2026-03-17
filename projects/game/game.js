@@ -140,7 +140,7 @@ function Gym() {
 	print("Lounge")
 	print("SecretRoom")
 
-        function processInput() {
+        function processInput(input) {
 	if (input.toLowerCase() === "lounge") {
             Lounge();
         }
