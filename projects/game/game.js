@@ -60,6 +60,12 @@ function getDayName(dayNum) {
     const days = ['Monday','Tuesday','Wednesday','Thursday','Friday'];
     return days[dayNum];
 }
+function caughtByMason() {
+	clear();
+	print("You should have not have chosen to stay...");
+	print("Mason walks in and catches you!");
+	print("GAME OVER");
+}
 function Lobby() {
     LobbyDiscovered = true;
     clear();
@@ -67,15 +73,19 @@ function Lobby() {
     print("\nYou are in the Lobby hanging out.");
     print("\nWhere do you go?");
     print("Lounge");
-    print("stay here");
+    print("stay");
+    print("lobby");
  
 	function processInput(input){
         if (input.toLowerCase() === "lounge") {
             Lounge();
         }
-        else if (input.toLowerCase() === "stay here") {
+        else if (input.toLowerCase() === "lobby") {
             Lobby();
         }
+	else if (input.toLowerCase() === "stay") {
+		caughtByMason();
+	}
     }
     waitForInput(processInput);
 }
