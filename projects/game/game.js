@@ -127,11 +127,12 @@ function Bathroom() {
 function Gym() {
     GymDiscovered = true;
     if (!check_time()) return;
-    if (!haveMark)
+    if (!haveMark) {
         print("\nDoor is locked.");
         print("You see the mark and take it.");
         haveMark = true;
         print("\nGo get the key in the bathroom!");
+    }
 	print("\nWhere would you like to go")
 	print("Lounge")
 	print("SecretRoom")
@@ -140,21 +141,22 @@ function Gym() {
 	if (input.toLowerCase() === "lounge") {
             Lounge();
         }
-       else if (input.toLowerCase() === "secretroom") (!haveKey)
+       else if (input.toLowerCase() === "secretroom" && !haveKey) {
         print("\nDoor is still locked.");
-        function processInput(){
             Gym();
         }
+	else if (input.toLowerCase() === "secretroom" && haveKey) {
+		SecretRoom();
+	}
 }
 	waitForInput(processInput);
 }
 function Bathroom() {
     BathroomDiscovered = true;
     if (!check_time()) return;
-    if (haveMark && !haveKey)
+    if (!haveKey)
         print("\nYou find the key in the Bathroom and take it.");
         haveKey = true;
-	haveMark = true;
     print("\nWhere do you go?");
     print("Lounge");
     print("stay here");{
@@ -172,20 +174,23 @@ function Bathroom() {
 function Gym() {
     GymDiscovered = true;
     if (!check_time()) return;
-    if (haveKey)
+
+    if (haveKey) {
         print("\nDoor is unlocked.");
-        haveMark = true;
-	haveKey = true;
         print("\nGo into the secretroom!");
 	print("\nWhere would you like to go")
 	print("Lounge")
 	print("SecretRoom")
+      } else {
+	      print("\nDoor is still locked.");
+	      print("\nWhere would you like to go?");
+	      print("Lounge")
+      }
 
         function processInput(input) {
 	if (input.toLowerCase() === "lounge") {
             Lounge();
-        }
-       else if (input.toLowerCase() === "secretroom")
+        } else if (input.toLowerCase() === "secretroom")
         function processInput(){
             SecretRoom();
         }
