@@ -145,7 +145,7 @@ function Gym() {
         function processInput(){
             Gym();
         }
-    else if (input.toLowerCase() === "stay in gym") {
+    else (input.toLowerCase() === "stay in gym") {
 	    Gym();
         waitForInput(processInput);
     }
