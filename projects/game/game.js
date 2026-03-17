@@ -150,7 +150,6 @@ function Bathroom() {
     print("\nWhere do you go?");
     print("Lounge");
     print("stay here");
-    print("secretroom");
 
 	function processInput(input){
         if (input.toLowerCase() === "lounge") {
