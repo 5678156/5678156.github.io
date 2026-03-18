@@ -89,6 +89,35 @@ function caughtByMason() {
         waitForInput(processInput);
     }
 }
+function caughtInMason() {
+	clear();
+	print("You should have not have chosen to stay...");
+	setTimeout(function() {
+	print("Mason walks in and catches you pooping!");
+	setTimeout(function() {
+	print("GAME OVER");
+	},2000);
+},2000);
+    if (day < 5) {
+	    setTimeout(function() {
+        print("\nWould you like to try again tomorrow? Say yes or no");
+	    },2500);
+        function processInput(input){
+            if (input.toLowerCase() === "yes") {
+                day++;
+                minutes = 0;
+                haveMark = false;
+                haveKey = false;
+                start();
+            } 
+            else if (input.toLowerCase() === "no") {
+                print("Ok, better luck next time!");
+                gameActive = false;
+            }
+        }
+        waitForInput(processInput);
+    }
+}
 function Lobby() {
     LobbyDiscovered = true;
     clear();
@@ -160,7 +189,7 @@ function Bathroom() {
             Lounge();
         }
         else if (input.toLowerCase() === "stay here") {
-            Bathroom();
+            caughtInMason();
         }
     }
     waitForInput(processInput);
@@ -182,6 +211,7 @@ function Gym() {
 	      print("\nDoor is still locked.");
 	      print("\nWhere would you like to go?");
 	      print("Lounge")
+	      print("stay")
 	print("SecretRoom")
 
         function processInput(input) {
@@ -190,6 +220,9 @@ function Gym() {
         }
 	else if (input.toLowerCase() === "secretroom" && haveKey) {
 		SecretRoom();
+	}
+	else if (input.toLowerCase() === "stay") {
+		caughtByMason();
 	}
        else if (input.toLowerCase() === "secretroom" && !haveKey) {
         print("\nDoor is still locked.");
